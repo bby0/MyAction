@@ -33,7 +33,7 @@ if (process.env.V_REF_URL) {
     //验证V_REF_URL和cookie是否填写正确
     ref_url_ver()
 } else {
-    console.log("V_REF_URL值填写错误:process.env.V_REF_URL")
+     console.log("V_REF_URL值填写错误:"+ process.env.V_REF_URL)
 }
 
 /**
