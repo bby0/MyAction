@@ -62,7 +62,8 @@ async function start() {
 
     if(SEND_KEY) {
         if (content.includes("签到成功") | content.includes("已签")) {
-            console.log("电信签到-" + content)
+            await notify.sendNotify("电信重复签到-" + new Date().toLocaleDateString(), content);
+            console.log("电信重复签到-" + content)
         }else{
             await notify.sendNotify("中国电信签到-" + new Date().toLocaleDateString(), content);
             console.log("中国电信签到-" + content)
