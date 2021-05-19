@@ -13,7 +13,8 @@ const SEND_KEY = process.env.SEND_KEY
 const UTC8 = new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*60*60*1000;
 
 async function downFile () {
-    const url = 'https://raw.githubusercontent.com/BlueSkyClouds/My-Actions/master/function/iQIYI-DailyBonus/iQIYI-bak.js'
+    // https://github.com/bby0/MyAction/blob/c4caafc65ed5f09e01b2d1708816619b7bb67917/function/iQIYI-DailyBonus/iQIYI-bak.js
+    const url = 'https://github.com/bby0/MyAction/blob/main/function/iQIYI-DailyBonus/iQIYI-bak.js'
     await download(url, './')
 }
 
