@@ -23,6 +23,7 @@ async function changeFiele () {
     const f = fs.existsSync('./iQIYI-bak.js')
     console.log(f)
     await fs.writeFileSync( './iQIYI-bak.js', content, 'utf8')
+    fs.existsSync;
 }
 
 async function deleteFile(path) {
