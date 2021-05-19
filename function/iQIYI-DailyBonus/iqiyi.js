@@ -20,7 +20,8 @@ async function downFile () {
 async function changeFiele () {
     let content = await fs.readFileSync('./iQIYI-bak.js', 'utf8')
     content = content.replace(/var cookie = ''/, `var cookie = '${KEY}'`)
-    console.log(content)
+    const f = fs.existsSync('./iQIYI-bak.js')
+    console.log(f)
     await fs.writeFileSync( './iQIYI-bak.js', content, 'utf8')
 }
 
