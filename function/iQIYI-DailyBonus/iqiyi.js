@@ -45,6 +45,8 @@ async function start() {
     await changeFiele();
     console.log('替换变量完毕')
     // 执行
+    js = fs.readFileSync(./iQIYI-bak.js, "utf8");
+    console.log(js)
     await exec("node iQIYI-bak.js >> result.txt");
     console.log('执行完毕')
     const path = "./result.txt";
