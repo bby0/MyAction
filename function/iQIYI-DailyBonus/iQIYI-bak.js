@@ -20,7 +20,10 @@ var $nobyda = nobyda();
   }
 })().finally(() => {
   $nobyda.done();
-})
+}).catch(err => {
+                console.log(err);
+            })
+
 
 function login() {
   return new Promise(resolve => {
@@ -42,7 +45,10 @@ function login() {
       resolve()
     })
     if (out) setTimeout(resolve, out)
-  })
+  }).catch(err => {
+                console.log(err);
+            })
+
 }
 
 function Checkin() {
@@ -79,9 +85,10 @@ function Checkin() {
       resolve()
     })
     if (out) setTimeout(resolve, out)
-  }).catch((error) => {
-    throw new Error(error);
-  });
+  }).catch(err => {
+                console.log(err);
+            })
+
 }
 Checkin.catch((error) => {
   console.error(error);
