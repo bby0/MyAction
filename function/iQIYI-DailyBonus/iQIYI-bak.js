@@ -83,9 +83,22 @@ function Checkin() {
     throw new Error(error);
   });
 }
-promise2.catch((error) => {
+Checkin.catch((error) => {
   console.error(error);
 });
+
+
+var myfunc = Checkin();
+myfunc.then(function () {
+     console.log("Promise Resolved");
+});
+// See the Difference here
+myfunc.catch(function () {
+     console.log("Promise Rejected");
+});
+
+
+
 
 function Lottery(s) {
   return new Promise(resolve => {
