@@ -87,15 +87,9 @@ Checkin.catch((error) => {
   console.error(error);
 });
 
+login().catch(error => console.log(error.message));
+Checkin().catch(error => console.log(error.message));
 
-var myfunc = Checkin();
-myfunc.then(function () {
-     console.log("Promise Resolved");
-});
-// See the Difference here
-myfunc.catch(function () {
-     console.log("Promise Rejected");
-});
 
 
 
