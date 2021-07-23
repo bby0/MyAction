@@ -79,7 +79,9 @@ function Checkin() {
       resolve()
     })
     if (out) setTimeout(resolve, out)
-  })
+  }).catch((error) => {
+  console.error(error);
+})
 }
 
 function Lottery(s) {
