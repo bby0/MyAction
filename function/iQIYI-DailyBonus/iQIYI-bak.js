@@ -53,6 +53,7 @@ function login() {
 
 function Checkin() {
   return new Promise(resolve => {
+    console.log(cookie)
     var URL = {
       url: 'https://tc.vip.iqiyi.com/taskCenter/task/queryUserTask?autoSign=yes&P00001=' + cookie
     }
