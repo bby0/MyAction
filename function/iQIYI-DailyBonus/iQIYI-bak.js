@@ -80,9 +80,12 @@ function Checkin() {
     })
     if (out) setTimeout(resolve, out)
   }).catch((error) => {
-  console.error(error);
-})
+    throw new Error(error);
+  });
 }
+promise2.catch((error) => {
+  console.error(error);
+});
 
 function Lottery(s) {
   return new Promise(resolve => {

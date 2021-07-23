@@ -4,7 +4,7 @@ function Env(name, opts) {
       this.env = env
     }
 
-    send(opts, method = 'GET') {
+    send(opts, method = 'GET')
       opts = typeof opts === 'string' ? { url: opts } : opts
       let sender = this.get
       if (method === 'POST') {
