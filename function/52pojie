@@ -2,8 +2,9 @@
 import requests 
 from bs4 import BeautifulSoup
 
-cookie = ''  # 配置你的cookie
-sckey = '' # 配置你的server酱SCKEY
+cookie = os.environ['WUAI_COOKIE'].replace(" ", "")  # 配置你的cookie
+sckey = os.environ['SEND_KEY']
+
 
 def pushinfo(info,specific):
     headers={   
