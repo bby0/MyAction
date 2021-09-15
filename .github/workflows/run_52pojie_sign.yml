@@ -30,7 +30,7 @@ jobs:
 #         sed -i 's/你的server酱SCKEY/${{ secrets.SCKEY }}/' ./52pojieCheckIn.py
 #         sed -i 's/你的cookie/${{ secrets.WUAI_COOKIE }}/' ./52pojieCheckIn.py
     - name: 执行签到程序
-      run: python3 ./52pojieCheckIn.py
+      run: python3 function/52pojie.py
       env:
           iQIYI_COOKIE: ${{ secrets.WUAI_COOKIE }}
           SEND_KEY: ${{ secrets.SEND_KEY }}
