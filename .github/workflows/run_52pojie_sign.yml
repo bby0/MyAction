@@ -27,6 +27,6 @@ jobs:
     - name: 在脚本中填入用户参数
       run: |
         sed -i 's/你的server酱SCKEY/${{ secrets.SCKEY }}/' ./52pojieCheckIn.py
-        sed -i 's/你的cookie/${{ secrets.52cookie }}/' ./52pojieCheckIn.py
+        sed -i 's/你的cookie/${{ secrets.WUAI_COOKIE }}/' ./52pojieCheckIn.py
     - name: 执行签到程序
       run: python3 ./52pojieCheckIn.py
