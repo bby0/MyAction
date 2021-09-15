@@ -19,17 +19,18 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
     - name: 安装python3
       run: sudo apt-get update && sudo apt-get install python3 python3-pip python3-bs4 && sudo pip install requests
     
     - name: 在脚本中填入用户参数
-      env:
-          iQIYI_COOKIE: ${{ secrets.WUAI_COOKIE }}
-          SEND_KEY: ${{ secrets.SEND_KEY }}
+      
 #       run: |
 #         sed -i 's/你的server酱SCKEY/${{ secrets.SCKEY }}/' ./52pojieCheckIn.py
 #         sed -i 's/你的cookie/${{ secrets.WUAI_COOKIE }}/' ./52pojieCheckIn.py
     - name: 执行签到程序
       run: python3 ./52pojieCheckIn.py
+      env:
+          iQIYI_COOKIE: ${{ secrets.WUAI_COOKIE }}
+          SEND_KEY: ${{ secrets.SEND_KEY }}
