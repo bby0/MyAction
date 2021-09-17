@@ -21,15 +21,15 @@ def main(*args):
     }
     requests.session().get('https://www.52pojie.cn/home.php?mod=task&do=apply&id=2',headers=headers)
     a=requests.session().get('https://www.52pojie.cn/home.php?mod=task&do=draw&id=2',headers=headers)
-    print(a)
     b=BeautifulSoup(a.text,'html.parser')   
-    print(b)
     c=b.find('div',id='messagetext').find('p').text
 
     if "您需要先登录才能继续本操作"  in c: 
         pushinfo("Cookie失效", c)
     elif "恭喜"  in c:
         pushinfo("吾爱破解签到成功",c)
+    elif "不是进行中的任务"  in c:
+        pushinfo("吾爱破解签到重复",c)
     else:
         pushinfo("吾爱破解签到失败",c)
     print(c)
