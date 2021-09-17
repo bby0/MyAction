@@ -1,5 +1,4 @@
 # -*- coding: utf8 -*-
-const $ = new Env('吾爱破解签到');
 import requests 
 from bs4 import BeautifulSoup
 
