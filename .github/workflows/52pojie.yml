@@ -33,4 +33,4 @@ jobs:
       run: python3 function/52pojie.py
       env:
           WUAI_COOKIE: ${{ secrets.WUAI_COOKIE }}
-          SEND_KEY: ${{ secrets.SEND_KEY }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
