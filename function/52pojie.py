@@ -1,5 +1,6 @@
 # -*- coding: utf8 -*-
 import requests 
+import os
 from bs4 import BeautifulSoup
 
 cookie = os.environ['WUAI_COOKIE'].replace(" ", "")  # 配置你的cookie
