@@ -32,5 +32,5 @@ jobs:
     - name: 执行签到程序
       run: python3 function/52pojie.py
       env:
-          iQIYI_COOKIE: ${{ secrets.WUAI_COOKIE }}
+          WUAI_COOKIE: ${{ secrets.WUAI_COOKIE }}
           SEND_KEY: ${{ secrets.SEND_KEY }}
