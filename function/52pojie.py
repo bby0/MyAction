@@ -4,7 +4,7 @@ import os
 from bs4 import BeautifulSoup
 
 cookie = os.environ['WUAI_COOKIE'].replace(" ", "")  # 配置你的cookie
-sckey = os.environ['SEND_KEY']
+sckey = os.environ['PUSH_KEY']
 
 
 def pushinfo(info,specific):
